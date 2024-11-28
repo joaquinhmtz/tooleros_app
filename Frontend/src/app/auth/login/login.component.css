@@ -1,0 +1,70 @@
+.container-login {
+    width: 100%;  
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container-login > * {
+    height: 100%;
+}
+
+.container-login .bg-pic {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-login .bg-pic > img {
+    height: 100%;
+    opacity: 1;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.form-login {
+    padding: 20px;
+}
+
+mat-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px 50px 40px;
+    min-width: 500px;
+    position: relative;
+}
+
+mat-mdc-card-header {
+    padding: 0px !important;
+}
+
+mat-form-field {
+    margin-bottom: 5px;
+}
+
+.title-login {
+    margin-bottom: 25px;
+}
+
+.btn-login {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Responsive handlers : Login
+------------------------------------
+*/
+@media (max-width: 768px) {
+    .container-login mat-card {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 321px) {
+    .container-login mat-card {
+        width: 100%;
+    }
+}

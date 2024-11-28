@@ -1,0 +1,31 @@
+<section class="container-login">
+    <div class="bg-pic">
+        <img src="https://res.cloudinary.com/pkimages/image/upload/v1486028949/demo-logo_lnsv8h.png" alt="">
+    </div>
+    <mat-card class="login-container-form">
+        <mat-card-header>
+            <mat-card-title class="title-login">Iniciar sesión</mat-card-title>
+        </mat-card-header>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="flex-center-center flex-col">
+            <mat-form-field [style.width]="'100%'">
+                <mat-label>Usuario</mat-label>
+                <input #emailLogin type="text" matInput formControlName="username" placeholder="Ej. usuario@enjoy.com">
+                <mat-error *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)">
+                    <span class="text-sm text-red-500 mt-1" *ngIf="loginForm.controls['username'].errors.required">El usuario es requerido</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field [style.width]="'100%'">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput formControlName="password" placeholder="Ej. ******">
+                <mat-error *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                    <span class="text-sm text-red-500 mt-1" *ngIf="loginForm.controls['password'].errors.required">La contraseña es requerida</span>
+                </mat-error>
+            </mat-form-field>
+
+            <button class="btn-login" [style.width]="'100%'" mat-raised-button color="primary" type="submit">
+                Entrar
+            </button>
+        </form>
+    </mat-card>
+</section>
