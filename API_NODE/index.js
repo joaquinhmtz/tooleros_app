@@ -56,6 +56,10 @@ app.set('showStackError', true);
 app.use('/', router);
 app.use(express.static(__dirname + '/public'));
 app.use(express["static"](__dirname + "/public/client"));
+app.get('/', (req, res) => {
+    res.end("hola mundo jeje")
+})
+
 //Para hacer redireccionamiento al front y no al back cuando el navegador se haga refresh (Prod)
 app.get('/app/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'public/client/index.html'))
