@@ -70,5 +70,5 @@ app.listen(PORT, () => {
 });
 
 connectDb();
-MkdirFolders();
+//MkdirFolders();
 module.exports = app;
