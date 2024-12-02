@@ -1,0 +1,12 @@
+<div class="sidenav-header">
+    <img [width]="pictureWidth" [height]="pictureWidth" src="/assets/imgs/logo.png" alt="">
+    <div class="header-text" [class.hide-header-text]="collapsedValue()">
+        <h2>Bienvenido</h2>
+        <!-- <p>sisisi</p> -->
+    </div>
+</div>
+<mat-nav-list>
+    @for (item of menuItems(); track item.label) {
+        <app-menu-item [item]="item" [collapse]="collapsedValue()"></app-menu-item>
+    }
+</mat-nav-list>

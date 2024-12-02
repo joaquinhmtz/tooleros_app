@@ -1,0 +1,15 @@
+<mat-toolbar class="mat-elevation-z3" color="primary">
+    <button mat-icon-button (click)="collapse()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="User options">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item type="button" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>Cerrar sesión</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>

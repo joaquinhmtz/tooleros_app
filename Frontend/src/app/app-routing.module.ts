@@ -6,10 +6,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import(`./auth/auth.module`).then(m => m.AuthModule)
   },
-  // {
-  //   path: 'app',
-  //   loadChildren: () => import(`./modules/main/main.module`).then(m => m.MainModule)
-  // },
+  {
+    path: 'app',
+    loadChildren: () => import(`./main/main.module`).then(m => m.MainModule)
+  },
   {
     path : '**', 
     pathMatch : 'full',
